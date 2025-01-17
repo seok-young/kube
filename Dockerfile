@@ -14,7 +14,7 @@ RUN ./gradlew dependencies --no-daemon
 # 소스 코드 복사
 COPY src src
 # 애플리케이션 빌드
-RUN ./gradlew build --no-daemon
+RUN ./gradlew build --no-daemon --stacktrace
 # 두 번째 스테이지: 실행 스테이지
 FROM ghcr.io/graalvm/jdk-community:21
 # 작업 디렉토리 설정
